@@ -36,6 +36,10 @@ private boolean isLoggedIn = false;
         return isLoggedIn;
     }
 
+    public void setLoggedIn(boolean loggedIn) {
+        isLoggedIn = loggedIn;
+    }
+
     public int getBorrowedBooksLimit() {
         return borrowedBooksLimit;
     }

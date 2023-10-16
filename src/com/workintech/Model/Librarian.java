@@ -14,14 +14,9 @@ public class Librarian extends Person {
         return password;
     }
 
-    public boolean authenticate(String enteredName, String enteredPassword) {
-        if (this.getName().equals(enteredName) && this.password.equals(enteredPassword)) {
-            isLoggedIn = true;
-            return true;
-        } else {
-            isLoggedIn = false;
-            return false;
-        }
+
+    public void setLoggedIn(boolean loggedIn) {
+        isLoggedIn = loggedIn;
     }
 
     public boolean isLoggedIn() {
