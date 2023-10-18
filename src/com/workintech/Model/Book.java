@@ -1,7 +1,6 @@
 package com.workintech.Model;
 
 import com.workintech.Enum.BookCategories;
-import com.workintech.Enum.BookFees;
 
 import java.util.Objects;
 
@@ -9,23 +8,25 @@ public class Book{
 private String id;
 private Author author;
 private String name;
-private double price;
 private boolean isBorrowed;
 private BookCategories bookCategories;
-private BookFees bookFees;
 
-    public Book(String id, Author author, String name, double price, boolean isBorrowed, BookCategories bookCategories, BookFees bookFees) {
+
+    public Book(String id, Author author, String name, boolean isBorrowed, BookCategories bookCategories) {
         this.id = id;
         this.author = author;
         this.name = name;
-        this.price = price;
         this.isBorrowed = isBorrowed;
-        this.bookCategories = bookCategories;
+               this.bookCategories = bookCategories;
     }
 
     public String getId() {
         return id;
     }
+
+
+
+
 
     public void setId(String id) {
         this.id = id;
@@ -47,13 +48,9 @@ private BookFees bookFees;
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
-    }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+
+
 
     public boolean isBorrowed() {
         return isBorrowed;
@@ -70,9 +67,7 @@ private BookFees bookFees;
     public void setBookCategories(BookCategories bookCategories) {
         this.bookCategories = bookCategories;
     }
-    public BookFees getBookFees() {
-        return bookFees;
-    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -92,11 +87,8 @@ private BookFees bookFees;
                 "id='" + id + '\'' +
                 ", author=" + author +
                 ", name='" + name + '\'' +
-                ", price=" + price +
                 ", isBorrowed=" + isBorrowed +
                 ", bookCategories=" + bookCategories +
                 '}';
     }
-
-
 }

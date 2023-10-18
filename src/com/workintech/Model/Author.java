@@ -5,13 +5,13 @@ import java.util.Objects;
 
 public class Author {
     private String name;
-    private String surname;
+
     private String id;
     List<Book> books;
 
-    public Author(String name, String surname, String id, List<Book> books) {
+    public Author(String name,  String id, List<Book> books) {
         this.name = name;
-        this.surname = surname;
+
         this.id = id;
         this.books = books;
     }
@@ -20,9 +20,7 @@ public class Author {
         return name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
+
 
     public String getId() {
         return id;
@@ -47,11 +45,8 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", id=" + id +
-                ", books=" + books +
-                '}';
+        return "Author: " +
+                 name + '\'' +
+                ", id=" + id;
     }
 }

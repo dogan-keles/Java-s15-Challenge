@@ -1,9 +1,5 @@
 package com.workintech.Model;
 
-import com.workintech.Services.BookServices;
-import com.workintech.Services.UserServices;
-
-import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +14,7 @@ private boolean isLoggedIn = false;
         super(name, age, reader_id, adress, phoneNumber, email);
         this.borrowedBooksLimit = borrowedBooksLimit;
         this.borrowedBooks = borrowedBooks;
-        this.balance = balance;
+        balance = 0.0;
     }
 
     public boolean authenticate(String enteredName, int enteredId) {
